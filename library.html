@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib.css" />
+    <script src="lib.js"></script>
+  </head>
+  <body>
+    <h1>Library</h1>
+    <!-- Adding books -->
+    <form id="addbookz">
+      <input type="text" id="title" placeholder="Book title" />
+      <input type="text" id="author" placeholder="Author" />
+      <input
+        type="number"
+        id="pages"
+        min="1"
+        max="10000"
+        placeholder="Number of pages"
+      />
+      <select name="mydropdown" id="read">
+        <option value="Read">Read</option>
+        <option value="Not read">Not read</option>
+      </select>
+
+      <button onclick="addBookToLibrary(); this.reset(); return false;">
+        Submit
+      </button>
+    </form>
+    <!--header-->
+    <div id="lib1">
+      <div class="th1">Book title</div>
+      <div class="th1">Author</div>
+      <div class="th1">Number of pages</div>
+      <div class="th1">Read</div>
+      <div class="th1" id="remove">Remove</div>
+    </div>
+    <!--Content from the library goes here-->
+    <div id="lib2"></div>
+  </body>
+</html>
